@@ -123,7 +123,7 @@ plot(times, PI, 'LineWidth', 3)
 plot(times, PID, 'LineWidth', 3)
 
 xlabel('Time [s]')
-xlabel('Amplitude')
+ylabel('Amplitude')
 
 
 legend('KP = 1', 'P', 'PI', 'PID')
@@ -157,24 +157,30 @@ PID_Improved = step(S_PID_Improved,t);
 
 
 figure
-plot(times, P, 'DisplayName', 'P')
+plot(times, P, 'DisplayName', 'P', 'LineWidth', 3)
 hold on
-plot(times, P_Improved, 'DisplayName', 'P improved')
+plot(times, P_Improved, 'DisplayName', 'P improved', 'LineWidth', 3)
 legend('show')
+xlabel('Time [s]')
+ylabel('Amplitude')
 hold off
 
 figure
-plot(times, PI, 'DisplayName', 'PI')
+plot(times, PI, 'DisplayName', 'PI', 'LineWidth', 3)
 hold on
-plot(times, PI_Improved, 'DisplayName', 'PI improved')
+plot(times, PI_Improved, 'DisplayName', 'PI improved', 'LineWidth', 3)
 legend('show')
+xlabel('Time [s]')
+ylabel('Amplitude')
 hold off
 
 figure
-plot(times, PID, 'DisplayName', 'PID')
+plot(times, PID, 'DisplayName', 'PID', 'LineWidth', 3)
 hold on
-plot(times, PID_Improved, 'DisplayName', 'PID imporved')
+plot(times, PID_Improved, 'DisplayName', 'PID imporved', 'LineWidth', 3)
 legend('show')
+xlabel('Time [s]')
+ylabel('Amplitude')
 hold off
 %plot(times, P_Improved, 'DisplayName', 'P improved')
 
